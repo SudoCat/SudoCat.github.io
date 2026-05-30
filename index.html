@@ -160,9 +160,32 @@
         margin-bottom: 0;
       }
     }
+    /* as funny as making a really ugly webiste is, I should still add some a11y */
+    .a11y-go-brr {
+      position: absolute;
+      top: 1vh;
+      right: 1vw;
+      background-color: black;
+      color: white;
+      padding: 0.5em;
+      font-size: 2em;
+      border: 4px blue ridge;
+    }
+    body:has(input[name=a11y]:checked) {
+      background-color: grey;  
+    
+      h1,h2,p,span {
+        color: white;
+        mix-blend-mode: unset;
+      }
+      .Hero:after, .Hero:before {
+         background-color: black; 
+      }
+    }
   </style>
 </head>
 <body>
+  <label class="a11y-go-brr"><input type="checkbox" name="a11y">Ow my eyes</label>
   <main class="Hero">
     <p class="Hero-greeting">Howdy!</p>
     <h1 class="Hero-name">I'm <span class="u-fav">Robin Neal</span></h1>
